@@ -26,7 +26,7 @@ function interactive_config_ask_build_only() {
 		BUILD_ONLY=$(dialog --stdout --title "Choose an option" --backtitle "$backtitle" --no-tags \
 			--menu "Select what to build" $TTY_Y $TTY_X $((TTY_Y - 8)) "${options[@]}")
 		unset options
-		#[[ -z $BUILD_ONLY ]] && exit_with_error "No option selected"
+		[[ -z $BUILD_ONLY ]] && exit_with_error "No option selected"
 
 	fi
 }
