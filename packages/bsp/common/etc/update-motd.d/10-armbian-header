@@ -37,20 +37,20 @@ echo -e "Welcome to \e[0;91mArmbian ${VERSION} ${DISTRIBUTION_CODENAME^}\x1B[0m 
 
 # displaying status warnings
 
-if [[ "$IMAGE_TYPE" != "stable" ]]; then
-	[[ "$IMAGE_TYPE" == "user-built" ]] && UNSUPPORTED_TEXT="built from trunk"
-	[[ "$IMAGE_TYPE" == "nightly" ]] && UNSUPPORTED_TEXT="untested automated build"
-else
-	[[ "$BOARD_TYPE" == "csc" || "$BOARD_TYPE" == "tvb" ]] && UNSUPPORTED_TEXT="community creations"
-	[[ "$BOARD_TYPE" == "wip" ]] && UNSUPPORTED_TEXT="work in progress"
-	[[ "$BOARD_TYPE" == "eos" ]] && UNSUPPORTED_TEXT="end of life"
-fi
-
-if [[ -n $DISTRIBUTION_STATUS && $DISTRIBUTION_STATUS != supported ]]; then
-	[[ -n $UNSUPPORTED_TEXT ]] && UNSUPPORTED_TEXT+=" & "
-	UNSUPPORTED_TEXT+="unsupported ($DISTRIBUTION_CODENAME) userspace!"
-fi
-
-if [[ -n $UNSUPPORTED_TEXT ]]; then
-	 echo -e "\e[0;91mNo end-user support: \x1B[0m$UNSUPPORTED_TEXT\n"
-fi
+#if [[ "$IMAGE_TYPE" != "stable" ]]; then
+#	[[ "$IMAGE_TYPE" == "user-built" ]] && UNSUPPORTED_TEXT="built from trunk"
+#	[[ "$IMAGE_TYPE" == "nightly" ]] && UNSUPPORTED_TEXT="untested automated build"
+#else
+#	[[ "$BOARD_TYPE" == "csc" || "$BOARD_TYPE" == "tvb" ]] && UNSUPPORTED_TEXT="community creations"
+#	[[ "$BOARD_TYPE" == "wip" ]] && UNSUPPORTED_TEXT="work in progress"
+#	[[ "$BOARD_TYPE" == "eos" ]] && UNSUPPORTED_TEXT="end of life"
+#fi
+#
+#if [[ -n $DISTRIBUTION_STATUS && $DISTRIBUTION_STATUS != supported ]]; then
+#	[[ -n $UNSUPPORTED_TEXT ]] && UNSUPPORTED_TEXT+=" & "
+#	UNSUPPORTED_TEXT+="unsupported ($DISTRIBUTION_CODENAME) userspace!"
+#fi
+#
+#if [[ -n $UNSUPPORTED_TEXT ]]; then
+#	 echo -e "\e[0;91mNo end-user support: \x1B[0m$UNSUPPORTED_TEXT\n"
+#fi
